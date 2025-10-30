@@ -1,9 +1,14 @@
 package com.example.socialMediaBE.repository;
 
+import java.util.Optional;
+
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.example.socialMediaBE.entity.User;
 
 public interface AuthRepository extends JpaRepository<User, Long> {
-   
+   Optional<User> findByUsername(String username);
+   Optional<User> findByEmail(String email);
+    boolean existsByUsername(String username);
+    boolean existsByEmail(String email);
 }

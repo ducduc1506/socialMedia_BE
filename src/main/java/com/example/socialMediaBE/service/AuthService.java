@@ -1,7 +1,8 @@
 package com.example.socialMediaBE.service;
 
-import com.example.socialMediaBE.entity.User;
+import com.example.socialMediaBE.dto.auth.AuthResponse;
+import com.example.socialMediaBE.dto.auth.RegisterRequest;
 
 public interface AuthService {
-    User registerUser(User user);
+    AuthResponse register(RegisterRequest request);
 }

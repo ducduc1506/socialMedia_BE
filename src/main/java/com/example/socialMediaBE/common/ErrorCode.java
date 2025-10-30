@@ -8,7 +8,11 @@ public enum ErrorCode {
     UNAUTHORIZED(401, "Không có quyền truy cập"),
     FORBIDDEN(403, "Bị cấm truy cập"),
     NOT_FOUND(404, "Không tìm thấy"),
-    INTERNAL_SERVER_ERROR(500, "Lỗi hệ thống");
+    INTERNAL_SERVER_ERROR(500, "Lỗi hệ thống"),
+
+    USERNAME_ALREADY_EXISTS(409, "Username đã tồn tại"),
+    EMAIL_ALREADY_EXISTS(409, "Email đã tồn tại"),
+    INVALID_CREDENTIALS(401, "Username hoặc password không đúng");
 
     private final int code;
     private final String message;
